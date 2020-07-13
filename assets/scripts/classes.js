@@ -64,3 +64,55 @@ class Wagon {
     }
 }
 
+
+
+function newTraveler(){
+newPerson = document.createElement('div')
+newPerson.class = 'person'
+let nextTraveler = new Traveler(travelerName.value)
+let personImage = document.createElement('img')
+personImage.src = 'assets/farmer.png'
+let eatFood = document.createElement('button')
+let huntForFood = document.createElement('button')
+eatFood.class = 'eat'
+eatFood.innerText = 'Eat'
+huntForFood.class = 'hunt'
+huntForFood.innerText = 'Hunt'
+newPerson.append(eatFood, huntForFood, personImage,JSON.stringify(nextTraveler))
+main.append(newPerson)
+currentTravelers.append(newPerson,  )
+///---------------------------///
+eatFood.addEventListener('click', function(){
+    console.log('clicked')
+       nextTraveler.eat()
+    })
+}
+
+addTraveler.addEventListener('click', function()
+{
+    newTraveler()
+    
+
+})
+
+function newWagon(){
+nextWagon = document.createElement('div')
+let newWagon = new Wagon(newWagonCapacity.value)
+
+let quarentineWagon = document.createElement('button')
+quarentineWagon.class = 'createWagon'
+quarentineWagon.innerText = ' Quarentine?'
+
+wagonImg = document.createElement('img')
+wagonImg.src = 'assets/oldwagon.png'
+main.append(nextWagon)
+nextWagon.append(JSON.stringify(newWagon),quarentineWagon, wagonImg)
+
+}
+
+createWagon.addEventListener('click', function(){
+    newWagon()
+
+
+
+})

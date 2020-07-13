@@ -20,7 +20,7 @@ const main = document.querySelector('main')
 let currentTravelers = document.createElement('div')
 currentTravelers.id = 'wagon1'
 main.append(currentTravelers)
-currentTravelers.append(JSON.stringify(juan),' ', JSON.stringify(maude),' ', JSON.stringify(henrietta))
+currentTravelers.append(JSON.stringify(juan),' ', JSON.stringify(maude),' ', JSON.stringify(henrietta),' ', JSON.stringify(newTraveler))
 
 let seats = document.createElement('div')
 seats.id = 'wagonCapacity'
@@ -43,4 +43,7 @@ const hunting = document.querySelector('#hunt')
 const shouldQuarentine = document.querySelector('#shouldQuarentine')
 const addTraveler = document.querySelector('#addTraveler')
 const travelerName = document.querySelector('#travelerName')
+const newWagonCapacity = document.querySelector('#newWagonCapacity')
 
+
+ 
